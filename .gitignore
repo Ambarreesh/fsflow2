@@ -29,4 +29,7 @@ public/*.exe
 src/assets/*.dmg
 src/assets/*.exe
 
+# Firebase cache
+.firebase/
+
 

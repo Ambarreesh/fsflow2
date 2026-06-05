@@ -83,7 +83,7 @@ export default function DocsSection() {
           </div>
 
           {/* GUI File Actions */}
-          <div className="bg-white border border-zinc-200/60 rounded-3xl p-6 sm:p-8 shadow-xs hover:shadow-md transition-shadow md:col-span-2">
+          <div className="bg-white border border-zinc-200/60 rounded-3xl p-6 sm:p-8 shadow-xs hover:shadow-md transition-shadow">
             <div className="w-10 h-10 rounded-xl bg-zinc-100 flex items-center justify-center text-zinc-900 mb-6">
               <FileSpreadsheet className="w-5 h-5" />
             </div>
@@ -93,37 +93,64 @@ export default function DocsSection() {
               Control workspace state natively through the application's graphical controls:
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-zinc-600">
-              <div className="p-4 bg-zinc-50 rounded-2xl border border-zinc-100">
-                <h4 className="font-semibold text-zinc-900 mb-1 flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
-                  Files & Directory Ops
-                </h4>
-                <p className="text-xs text-zinc-500 leading-relaxed mt-1">
-                  Create, rename, or delete files directly in the GUI. Deletions instantly synchronize to peer disks.
-                </p>
-              </div>
+            <ul className="space-y-4 text-sm text-zinc-600">
+              <li className="flex gap-2">
+                <span className="text-zinc-950 font-bold shrink-0">•</span>
+                <div>
+                  <strong className="text-zinc-900">Files & Directory:</strong> Create, rename, or delete files directly in the GUI. Deletions instantly sync to peer disks.
+                </div>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-zinc-950 font-bold shrink-0">•</span>
+                <div>
+                  <strong className="text-zinc-900">Import & Export:</strong> Upload folders to seed workspaces. Download raw file states or export the full workspace as a ZIP file.
+                </div>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-zinc-950 font-bold shrink-0">•</span>
+                <div>
+                  <strong className="text-zinc-900">Git Remote:</strong> Track remote repo connections and trigger pre-push AST validity checks from the dashboard.
+                </div>
+              </li>
+            </ul>
+          </div>
 
-              <div className="p-4 bg-zinc-50 rounded-2xl border border-zinc-100">
-                <h4 className="font-semibold text-zinc-900 mb-1 flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
-                  Import & Download
-                </h4>
-                <p className="text-xs text-zinc-500 leading-relaxed mt-1">
-                  Upload complete folders to seed workspaces. Download raw file states directly inside the active toolbar.
-                </p>
-              </div>
-
-              <div className="p-4 bg-zinc-50 rounded-2xl border border-zinc-100">
-                <h4 className="font-semibold text-zinc-900 mb-1 flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
-                  Git Remote Scanner
-                </h4>
-                <p className="text-xs text-zinc-500 leading-relaxed mt-1">
-                  Add remote repo connections to trigger pre-push AST checks and run simulated git workflows directly from the GUI.
-                </p>
-              </div>
+          {/* Troubleshooting Section */}
+          <div className="bg-white border border-zinc-200/60 rounded-3xl p-6 sm:p-8 shadow-xs hover:shadow-md transition-shadow">
+            <div className="w-10 h-10 rounded-xl bg-zinc-100 flex items-center justify-center text-zinc-900 mb-6">
+              <RefreshCw className="w-5 h-5" />
             </div>
+
+            <h3 className="font-display font-bold text-xl text-zinc-900 mb-3">4. Troubleshooting & Connection Fixes</h3>
+            <p className="text-sm text-zinc-500 leading-relaxed mb-6">
+              Resolve common connection or folder syncing errors easily:
+            </p>
+
+            <ul className="space-y-4 text-sm text-zinc-600">
+              <li className="flex gap-2">
+                <span className="text-rose-500 font-bold shrink-0">•</span>
+                <div>
+                  <strong className="text-zinc-900">Server Connection Issue:</strong> If the sync status shows offline, copy the Render Sync Server URL:
+                  <div className="mt-1 flex items-center gap-1.5">
+                    <code className="px-1.5 py-0.5 bg-zinc-100 text-zinc-800 rounded font-mono text-xs select-all break-all">
+                      https://fs-flow-sync-server.onrender.com
+                    </code>
+                  </div>
+                  <p className="text-xs text-zinc-500 mt-1.5">
+                    Paste this into the app under <strong className="text-zinc-700">Profile Icon &rarr; Workspace &rarr; Sync Server Configuration</strong>, then click <strong className="text-zinc-700">Save</strong>.
+                  </p>
+                </div>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-rose-500 font-bold shrink-0">•</span>
+                <div>
+                  <strong className="text-zinc-900">Project Sync Errors:</strong> The continuous sync watcher is designed to watch a local folder.
+                  <p className="text-xs text-zinc-500 mt-1.5">
+                    You must copy and paste your coding project files/folders directly into the workspace folder created on your system (<code className="bg-zinc-100 px-1 py-0.5 rounded">~/FS-Workspace/&lt;workspaceId&gt;</code>) for the synchronization to work.
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
 
         </div>

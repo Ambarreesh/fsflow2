@@ -16,14 +16,10 @@ export default function Hero() {
   }, [])
 
   const handleDownload = (platform) => {
-    const filename = platform === 'macOS' ? 'FS Flow-1.0.0-arm64.dmg' : 'FS Flow Setup 1.0.0.exe'
-    const link = document.createElement('a')
-    link.href = `/${filename}`
-    link.setAttribute('download', filename)
-    link.style.display = 'none'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+    const url = platform === 'macOS'
+      ? 'https://drive.google.com/file/d/1Ius9ddbJzv3tCptER9cRWZNAAD7o1X4L/view?usp=sharing'
+      : 'https://drive.google.com/file/d/1Ius9ddbJzv3tCptER9cRWZNAAD7o1X4L/view?usp=sharing'
+    window.open(url, '_blank')
   }
 
   return (

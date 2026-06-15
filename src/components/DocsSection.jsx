@@ -133,7 +133,7 @@ export default function DocsSection() {
                   <strong className="text-zinc-900">Server Connection Issue:</strong> If the sync status shows offline, copy the Render Sync Server URL:
                   <div className="mt-1 flex items-center gap-1.5">
                     <code className="px-1.5 py-0.5 bg-zinc-100 text-zinc-800 rounded font-mono text-xs select-all break-all">
-                      https://fs-flow-sync-server.onrender.com
+                      https://fs-flow-sync-server-5ahw.onrender.com
                     </code>
                   </div>
                   <p className="text-xs text-zinc-500 mt-1.5">

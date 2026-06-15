@@ -1,5 +1,5 @@
 import React from 'react'
-import { Zap, ShieldAlert, GitBranch, RefreshCw } from 'lucide-react'
+import { Zap, ShieldCheck, GitBranch, RefreshCw, Cloud, Trash2, ShieldAlert } from 'lucide-react'
 
 export default function Features() {
   const featuresList = [
@@ -11,17 +11,27 @@ export default function Features() {
     {
       icon: <RefreshCw className="w-5 h-5 text-zinc-900" />,
       title: 'Zero-Config Watcher',
-      description: 'The lightweight background watcher recursively tracks changes on your disk, debouncing disk writes and suppressing feedback loops to keep your IDE lightweight.'
+      description: 'Lightweight background process recursively tracks local disk updates, debouncing writes and suppressing echo loops to keep your IDE running smoothly.'
     },
     {
-      icon: <ShieldAlert className="w-5 h-5 text-zinc-900" />,
-      title: 'AST Pre-Push Safety',
-      description: 'Validates workspace Javascript structure before simulated Git releases, automatically catching syntax defects (such as duplicate exports) before they commit.'
+      icon: <Cloud className="w-5 h-5 text-zinc-900" />,
+      title: 'Firestore Cloud Cache',
+      description: 'Secures active workspaces with Firestore persistence. Auto-restores collaborative files from the .crdt-store on server startup using debounced caching.'
     },
     {
       icon: <GitBranch className="w-5 h-5 text-zinc-900" />,
-      title: 'Git-Branchless Collaboration',
-      description: 'Bypasses traditional git branching overhead during hot-patching. Code edits propagate immediately to peer IDEs on file save events.'
+      title: 'Stable Connection Guard',
+      description: 'Stabilizes sync connections using ref-guarded WebSockets, preventing connection flapping and infinite connect/disconnect cycles during high traffic.'
+    },
+    {
+      icon: <Trash2 className="w-5 h-5 text-zinc-900" />,
+      title: 'Clean Cache Deletions',
+      description: 'Ensures file and folder deletions are permanent across all team member workspaces by instantly purging related .ybin cache states from server storage.'
+    },
+    {
+      icon: <ShieldCheck className="w-5 h-5 text-zinc-900" />,
+      title: 'AST Pre-Push Safety',
+      description: 'Validates workspace Javascript structure before simulated Git releases, automatically catching syntax defects (such as duplicate exports) before they commit.'
     }
   ]
 
@@ -32,12 +42,12 @@ export default function Features() {
           <h2 className="font-display font-bold text-3xl sm:text-4xl text-zinc-950 tracking-tight mb-4">
             Core Architecture Features
           </h2>
-          <p className="text-zinc-500">
-            FS Flow blends the speed of live collaborative editors with the control of local workspace tools.
+          <p className="text-zinc-500 text-sm">
+            FS Flow blends the speed of live collaborative editors with the control of local workspace tools, updated with our latest stability and storage releases.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuresList.map((feature, idx) => (
             <div 
               key={idx} 

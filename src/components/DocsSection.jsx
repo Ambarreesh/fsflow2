@@ -153,6 +153,50 @@ export default function DocsSection() {
             </ul>
           </div>
 
+          {/* Self-Hosting & Multi-Cloud Deployments */}
+          <div className="bg-white border border-zinc-200/60 rounded-3xl p-6 sm:p-8 shadow-xs hover:shadow-md transition-shadow md:col-span-2">
+            <div className="w-10 h-10 rounded-xl bg-zinc-100 flex items-center justify-center text-zinc-900 mb-6">
+              <FolderGit className="w-5 h-5" />
+            </div>
+
+            <h3 className="font-display font-bold text-xl text-zinc-900 mb-3">5. Self-Hosting & Server Deployments</h3>
+            <p className="text-sm text-zinc-500 leading-relaxed mb-6">
+              FS Flow supports containerized deployment on your own infrastructure with zero configuration overhead:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-zinc-600">
+              <div className="p-4 bg-zinc-50 rounded-2xl border border-zinc-100">
+                <h4 className="font-semibold text-zinc-900 mb-1 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                  Fly.io Deployments
+                </h4>
+                <p className="text-xs text-zinc-500 leading-relaxed mt-1">
+                  Use the pre-configured <code className="bg-zinc-100 px-1 py-0.5 rounded text-[10px]">fly.toml</code> to spin up Fly machines globally. Supports automated region scaling.
+                </p>
+              </div>
+
+              <div className="p-4 bg-zinc-50 rounded-2xl border border-zinc-100">
+                <h4 className="font-semibold text-zinc-900 mb-1 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                  Render App Blueprint
+                </h4>
+                <p className="text-xs text-zinc-500 leading-relaxed mt-1">
+                  Deploy as a Web Service using <code className="bg-zinc-100 px-1 py-0.5 rounded text-[10px]">render.yaml</code>, pre-configured for persistent storage mounts.
+                </p>
+              </div>
+
+              <div className="p-4 bg-zinc-50 rounded-2xl border border-zinc-100">
+                <h4 className="font-semibold text-zinc-900 mb-1 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                  Memory GC & Heap Safety
+                </h4>
+                <p className="text-xs text-zinc-500 leading-relaxed mt-1">
+                  Idle workspaces are garbage-collected automatically to stay within free-tier container bounds. Writes fallback to <code className="bg-zinc-100 px-1 py-0.5 rounded text-[10px]">/tmp/fs-workspace</code> to bypass container filesystem write limits.
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

@@ -29,6 +29,8 @@ export default function startServer() {
     'FS Flow Syncer initialized.',
     'Local workspace mapping: ~/FS-Workspace/FS-SOXJ1T',
     'Connection to Cloud Sync Server: ESTABLISHED 🟢',
+    '☁️ [Cloud Cache] Connection to Firebase Firestore: ACTIVE',
+    '☁️ [Cloud Cache] Auto-restored active workspace from .crdt-store on boot',
   ])
 
   const [isTyping, setIsTyping] = useState(false)
@@ -232,6 +234,12 @@ export default function startServer() {
                   <FileText className="w-3.5 h-3.5 text-indigo-400" />
                   <span>index.js</span>
                 </div>
+              </div>
+
+              {/* Cloud Sync Status Badge */}
+              <div className="hidden sm:flex items-center gap-1.5 text-[9px] text-emerald-400 font-semibold bg-emerald-950/40 border border-emerald-900/30 px-2 py-0.5 rounded-md">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span>CLOUD SYNC: ACTIVE</span>
               </div>
 
               {/* Live Presence Avatars */}

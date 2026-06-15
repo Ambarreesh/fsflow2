@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "feunic-space-6aea1",
+    "site": "fs-flow",
     "public": "dist",
     "ignore": [
       "firebase.json",

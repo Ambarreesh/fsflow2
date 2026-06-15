@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Features from './components/Features'
 import DashboardMockup from './components/DashboardMockup'
+import PowerTools from './components/PowerTools'
 import InstallationGuide from './components/InstallationGuide'
 import DocsSection from './components/DocsSection'
 import FeunicSpaceAd from './components/FeunicSpaceAd'
@@ -30,6 +31,9 @@ export default function App() {
 
         {/* Sync Simulator / Dashboard Mockup */}
         <DashboardMockup />
+
+        {/* Developer Workspace Toolkit */}
+        <PowerTools />
 
         {/* Installation Step-by-Step */}
         <InstallationGuide />

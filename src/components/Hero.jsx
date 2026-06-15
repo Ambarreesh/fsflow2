@@ -31,7 +31,7 @@ export default function Hero() {
         {/* Version Badge */}
         <div className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold text-zinc-600 bg-zinc-100 rounded-full mb-8 border border-zinc-200/50">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span>VERSION 1.0 IS LIVE</span>
+          <span>VERSION 1.1.0 IS LIVE</span>
         </div>
 
         {/* Heading */}

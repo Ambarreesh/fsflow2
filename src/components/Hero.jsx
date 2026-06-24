@@ -17,8 +17,8 @@ export default function Hero() {
 
   const handleDownload = (platform) => {
     const url = platform === 'macOS'
-      ? 'https://drive.google.com/file/d/1cTSKKEslSMSQbkBRT1NH_wh4JSPcJcQX/view?usp=sharing'
-      : 'https://drive.google.com/file/d/1SFCYlMITYDN-_C8poauq3ox5wqZS6Nmc/view?usp=sharing'
+      ? 'https://drive.google.com/file/d/1T3V43sRlUi_OabsWqe9ZApw1c-_br0PN/view?usp=sharing'
+      : 'https://drive.google.com/file/d/1BGnGhYEWedIYDA8xB-rgP-nTGJbQvqYz/view?usp=sharing'
     window.open(url, '_blank')
   }
 
